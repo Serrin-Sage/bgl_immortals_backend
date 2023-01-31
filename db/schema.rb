@@ -41,7 +41,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_31_143625) do
     t.string "guardian"
     t.string "immortal_house"
     t.integer "level"
-    t.string "merit_array"
+    t.string "merit_array", default: [], array: true
     t.integer "instructor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
