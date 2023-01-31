@@ -1,0 +1,2 @@
+class MeritsController < ApplicationController
+end
