@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :instructors
+  get '/merits/:category', to: 'merits#category'
   resources :merits
   resources :students
   resources :users
