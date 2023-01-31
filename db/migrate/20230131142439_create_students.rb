@@ -7,7 +7,8 @@ class CreateStudents < ActiveRecord::Migration[7.0]
       t.string :immortal_house
       t.integer :level
       t.string :merit_array
-
+      t.integer :instructor_id
+      
       t.timestamps
     end
   end
