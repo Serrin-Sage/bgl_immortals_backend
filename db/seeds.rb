@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 Merit.destroy_all
+Instructor.destroy_all
+User.destroy_all
+Student.destroy_all
 
 beast = Merit.create(name: "Beast", description: "Bravely face danger or challenge in an adventure.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1070018745906495498/Beast.png", color: "grey", category: "character")
 storyteller = Merit.create(name: "Storyteller", description: "Enrich the adventure with exceptional role-play.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1070018748074958888/Storyteller.png", color: "grey", category: "character")
@@ -55,3 +58,24 @@ classy = Merit.create(name: "Classy", description: "Listen attentively and share
 navigator = Merit.create(name: "Navigator", description: "Assist a new or inexperienced person in the Lab, either in or out of game.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1070721959811371098/Navigator.png", color: "blue", category: "virtue")
 
 p "Virtue Merits Created"
+
+instructor1 = Instructor.create(instructor_code: 1234, name: "Serrin Doscher", email: "serrin@example.com", password: "aperature", username: "serrinsage", site: "479 7th Avenue")
+
+p "Instructors Created"
+
+guardian1 = User.create(parent_code: 5678, name: "Christine Woods", email: "christine@example.com", password: "wizard", username: "WoodWizard")
+
+p "Guardians Created"
+
+student1 = Student.create(name: "Jimmy Edwards", age: 10, immortal_house: "Dyre", level: 7, merit_array: [beast, sage, diplomat], instructor_id: instructor1.id, guardian_id: guardian1.id)
+student2 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "", level: 0, merit_array: [], instructor_id: instructor1.id)
+student3 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "", level: 0, merit_array: [], instructor_id: instructor1.id)
+student4 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "", level: 0, merit_array: [], instructor_id: instructor1.id)
+student5 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "", level: 0, merit_array: [], instructor_id: instructor1.id)
+student6 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "", level: 0, merit_array: [], instructor_id: instructor1.id)
+student7 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "", level: 0, merit_array: [], instructor_id: instructor1.id)
+student8 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "", level: 0, merit_array: [], instructor_id: instructor1.id)
+student9 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "", level: 0, merit_array: [], instructor_id: instructor1.id)
+student10 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "", level: 0, merit_array: [], instructor_id: instructor1.id)
+
+p "Students Created"
