@@ -7,7 +7,7 @@ class CreateStudents < ActiveRecord::Migration[7.0]
       t.integer :level
       t.string :merit_array, array: true, default: []
       t.integer :instructor_id
-      t.integer :guardian_id
+      # t.integer :guardian_id, null: true
       
       t.timestamps
     end
