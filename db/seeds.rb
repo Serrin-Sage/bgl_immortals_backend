@@ -63,11 +63,11 @@ instructor1 = Instructor.create(instructor_code: 1234, name: "Serrin Doscher", e
 
 p "Instructors Created"
 
-guardian1 = User.create(parent_code: 5678, name: "Christine Woods", email: "christine@example.com", password: "wizard", username: "WoodWizard")
+user1 = User.create(parent_code: 5678, name: "Christine Woods", email: "christine@example.com", password: "wizard", username: "WoodWizard")
 
-p "Guardians Created"
+p "Users Created"
 
-student1 = Student.create(name: "Jimmy Edwards", age: 10, immortal_house: "Dyre", level: 7, merit_array: [beast, sage, diplomat], instructor_id: instructor1.id, guardian_id: guardian1.id)
+student1 = Student.create(name: "Jimmy Edwards", age: 10, immortal_house: "Dyre", level: 7, merit_array: [beast, sage, diplomat], instructor_id: instructor1.id)
 student2 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "", level: 0, merit_array: [], instructor_id: instructor1.id)
 student3 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "", level: 0, merit_array: [], instructor_id: instructor1.id)
 student4 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "", level: 0, merit_array: [], instructor_id: instructor1.id)

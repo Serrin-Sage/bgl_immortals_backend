@@ -42,9 +42,9 @@ development:
   <<: *default
   database: db/bgl_data
 
-test: 
-  <<: *default
-  database: db/bgl_data_test
+# test: 
+#   <<: *default
+#   database: db/bgl_data_test
 
 production:
   <<: *default
