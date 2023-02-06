@@ -18,7 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_31_143625) do
     t.integer "instructor_code"
     t.string "name"
     t.string "email"
-    t.string "password"
+    t.string "password_digest"
     t.string "username"
     t.string "site"
     t.datetime "created_at", null: false
@@ -42,6 +42,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_31_143625) do
     t.integer "level"
     t.string "merit_array", default: [], array: true
     t.integer "instructor_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -50,7 +51,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_31_143625) do
     t.integer "parent_code"
     t.string "name"
     t.string "email"
-    t.string "password"
+    t.string "password_digest"
     t.string "username"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
