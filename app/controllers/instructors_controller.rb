@@ -6,9 +6,9 @@ class InstructorsController < ApplicationController
 
     def login
         if request.post?
-            user = Instructor.find_by(instructor_code: params[:instructor_code], email: params[:email], password: params[:password])
-            if user
-                render json: user, status: :created
+            user = Instructor.find_by(instructor_code: params[:instructor_code], email: params[:email])
+            if user && user.authenticate(params[:password])
+                render json: user, status: :ok
             else
                 render json: { error: 'Invalid credentials' }, status: :unauthorized
             end
