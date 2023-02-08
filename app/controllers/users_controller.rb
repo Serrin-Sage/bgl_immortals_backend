@@ -28,4 +28,14 @@ class UsersController < ApplicationController
     def create
 
     end
+
+    def child_details
+        user = User.find_by(id: params[:id])
+        child = user.students
+        if (child)
+            render json: child
+        else
+            render json: {error: child.error.full_messages[0]}, status: 422
+        end
+    end
 end
