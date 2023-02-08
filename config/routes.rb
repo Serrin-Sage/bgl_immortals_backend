@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :users
   post '/parent_login', to: 'users#login'
   get '/parent_me', to: 'users#me'
+  get '/child_info/:id', to: 'users#child_details'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
