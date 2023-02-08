@@ -77,7 +77,7 @@ tortoise = Merit.create(name: "Tortoise", description: "Play a slow-paced, delib
 
 p "Tactical Merits Created"
 
-instructor_code = Code.create(number: "12345")
+instructor_code = Code.create(number: "12345", instructor_id: 1)
 code_example1 = Code.create(number: "23427")
 parent_code = Code.create(number: "56789")
 

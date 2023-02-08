@@ -26,7 +26,21 @@ class UsersController < ApplicationController
     end
 
     def create
-
+        student = Student.find_by(name: params[:child_name])
+        code = Code.find_by(number: params[:parent_code])
+        if student
+            user = User.create(user_params)
+            if user.valid?
+                token = JWT.encode({user_id: user.id}, APP_SECRET, 'HS256')
+                student.update(user_id: user.id)
+                code.update(user_id: user.id)
+                render json: {user: user, token: token, user_type: "parent"}, status: :ok
+            else
+                render json: {error: user.errors.full_messages[0]}, status: 422
+            end
+        else
+            render json: {error: "Student or code not found"}, status: 404
+        end
     end
 
     def child_details
@@ -37,5 +51,11 @@ class UsersController < ApplicationController
         else
             render json: {error: child.error.full_messages[0]}, status: 422
         end
+    end
+
+    private
+
+    def user_params
+        params.permit(:parent_code, :name, :email, :password)
     end
 end
