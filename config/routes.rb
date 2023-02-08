@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :codes
   resources :instructors
   post '/instructor_login', to: 'instructors#login'
   get '/instructor_students/:id', to: 'instructors#all_students'

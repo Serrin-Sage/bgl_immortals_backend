@@ -77,11 +77,15 @@ tortoise = Merit.create(name: "Tortoise", description: "Play a slow-paced, delib
 
 p "Tactical Merits Created"
 
-instructor1 = Instructor.create(instructor_code: 1234, name: "Serrin Doscher", email: "serrin@example.com", password: "aperature", username: "serrinsage", site: "479 7th Avenue")
+instructor_code = Code.create(number: "12345")
+code_example1 = Code.create(number: "23427")
+parent_code = Code.create(number: "56789")
+
+instructor1 = Instructor.create(instructor_code: instructor_code.number, name: "Serrin Doscher", email: "serrin@example.com", password: "aperature", username: "serrinsage", site: "479 7th Avenue")
 
 p "Instructors Created"
 
-user1 = User.create(parent_code: 5678, name: "Christine Woods", email: "christine@example.com",  password: "wizard", username: "TreeWizard")
+user1 = User.create(parent_code: parent_code.number, name: "Christine Woods", email: "christine@example.com",  password: "wizard", username: "TreeWizard")
 
 p "Users Created"
 
