@@ -15,6 +15,7 @@ class InstructorsController < ApplicationController
             user = Instructor.find_by(instructor_code: params[:instructor_code], email: params[:email])
             if user && user.authenticate(params[:password])
                 token = JWT.encode({user_id: user.id}, APP_SECRET, 'HS256')
+                user_type = JWT.encode({user_type: "instructor"}, APP_SECRET, 'HS256')
                 render json: {user: user, token: token, user_type: "instructor"}, status: :ok
             else
                 render json: { error: 'Invalid credentials' }, status: :unauthorized
