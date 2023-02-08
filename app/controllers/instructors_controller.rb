@@ -37,22 +37,25 @@ class InstructorsController < ApplicationController
 
     def create
         code = Code.find_by(number: params[:instructor_code])
-        codeCheck = (code.instructor_id == nil && code.user_id == nil)
-        
-        if code && codeCheck == true
-            user = Instructor.create(instructor_params)
-            if user.valid?
-                token = JWT.encode({user_id: user.id}, APP_SECRET, 'HS256')
-                code.update(instructor_id: user.id)
-                render json: {user: user, token: token, user_type: "instructor"}, status: :ok
-            else
-                render json: {error: user.errors.full_messages[0]}, status: 422
-            end
-        elsif codeCheck == false
-            render json: {error: "Code already in use"}, status: 422
-        else
+        if code.blank?
             render json: {error: "Code Not Found"}, status: 404
-        end
+        else
+            codeCheck = (code.instructor_id == nil && code.user_id == nil)
+            if code && codeCheck == true
+                user = Instructor.create(instructor_params)
+                if user.valid?
+                    token = JWT.encode({user_id: user.id}, APP_SECRET, 'HS256')
+                    code.update(instructor_id: user.id)
+                    render json: {user: user, token: token, user_type: "instructor"}, status: :ok
+                else
+                    render json: {error: user.errors.full_messages[0]}, status: 422
+                end
+            elsif codeCheck == false
+                render json: {error: "Code already in use"}, status: 422
+            else
+                render json: {error: "Code Not Found"}, status: 404
+            end
+        end   
     end
 
     private
