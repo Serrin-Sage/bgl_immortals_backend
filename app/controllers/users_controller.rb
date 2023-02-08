@@ -3,7 +3,7 @@ class UsersController < ApplicationController
     before_action :authenticate_user, only: [:me]
 
     def me 
-        render json: {user: @current_user}, status: 200
+        render json: {user: @current_user, user_type: "parent"}, status: 200
     end
 
     def index
@@ -15,7 +15,8 @@ class UsersController < ApplicationController
             user = User.find_by(parent_code: params[:parent_code], email: params[:email])
             if user && user.authenticate(params[:password])
                 token = JWT.encode({user_id: user.id}, APP_SECRET, 'HS256')
-                render json: {user: user, token: token}, status: 201
+                user_type = JWT.encode({user_type: "parent"}, APP_SECRET, 'HS256')
+                render json: {user: user, token: token, user_type: "parent"}, status: :ok
             else
                 render json: { error: 'Invalid credentials or User not found' }, status: :unauthorized
             end
