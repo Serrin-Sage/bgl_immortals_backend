@@ -59,6 +59,24 @@ navigator = Merit.create(name: "Navigator", description: "Assist a new or inexpe
 
 p "Virtue Merits Created"
 
+stellar = Merit.create(name: "Stellar", description: "Make an exceptional, game-changing move in a game.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1072619384096436270/Stellar.png", color: "red", category: "tactical")
+berserker = Merit.create(name: "Berserker", description: "Play using a heavily offensive style.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1072619347652120636/Berserker.png", color: "red", category: "tactical")
+voodoo_daddy = Merit.create(name: "Voodoo Daddy", description: "Thoughtfully target another player to accomplish an in-game goal.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1072619384725581884/VoodooDaddy.png", color: "red", category: "tactical")
+double_dead = Merit.create(name: "Double Dead", description: "Bust in a game with busting; die in a game with dying.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1072619348616810577/DoubleDesd.png", color: "red", category: "tactical")
+darkhorse = Merit.create(name: "Darkhorse", description: "Make a strong comeback or strong second-half showing.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1072619348293865512/DarkHorse.png", color: "red", category: "tactical")
+collector = Merit.create(name: "Collector", description: "Collect an exceptional amount of resources or money.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1072619348012839052/Collector.png", color: "red", category: "tactical")
+survivor = Merit.create(name: "Survivor", description: "Survive a near-death encounter or escape an unlikely situation.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1072619384310333451/Survivor.png", color: "red", category: "tactical")
+hawk = Merit.create(name: "Hawk", description: "Play using a heavily defensive strategy.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1072619349606674542/Hawk.png", color: "red", category: "tactical")
+lifesaver = Merit.create(name: "Lifesaver", description: "Save another player's life or help another player in game.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1072619349933838487/Lifesaver.png", color: "red", category: "tactical")
+dragons_eye = Merit.create(name: "Dragon's Eye", description: "Sit on a large pile or hoard of resources in a game.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1072619348931399700/DragonEye.png", color: "red", category: "tactical")
+frankenstein = Merit.create(name: "Frankenstein", description: "Build a setup so intricate that it comes alive!", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1072619349241761893/Frankenstein.png", color: "red", category: "tactical")
+oddity = Merit.create(name: "Oddity", description: "Cause or witness something unlikely or just plain weird to happen in game.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1072619383861559348/Oddity.png", color: "red", category: "tactical")
+analyst = Merit.create(name: "Analyst", description: "Run the numbers and build your strategy around it.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1072619347396276294/Analyst.png", color: "red", category: "tactical")
+all_in = Merit.create(name: "All-In", description: "Play a 'boom or bust' strategy, relying on luck and a big payout.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1072619347010392155/AllIn.png", color: "red", category: "tactical")
+tortoise = Merit.create(name: "Tortoise", description: "Play a slow-paced, deliberate strategy, relying on safe payout.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1072619384532648036/Tortoise.png", color: "red", category: "tactical")
+
+p "Tactical Merits Created"
+
 instructor1 = Instructor.create(instructor_code: 1234, name: "Serrin Doscher", email: "serrin@example.com", password: "aperature", username: "serrinsage", site: "479 7th Avenue")
 
 p "Instructors Created"
@@ -67,7 +85,7 @@ user1 = User.create(parent_code: 5678, name: "Christine Woods", email: "christin
 
 p "Users Created"
 
-student1 = Student.create(name: "Jimmy Edwards", age: 10, immortal_house: "Dyre", level: 7, merit_array: [beast, sage, diplomat], instructor_id: instructor1.id, user_id: user1.id)
+student1 = Student.create(name: "Jimmy Edwards", age: 10, immortal_house: "JS", level: 7, merit_array: [beast, sage, diplomat], instructor_id: instructor1.id, user_id: user1.id)
 student2 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "", level: 0, merit_array: [], instructor_id: instructor1.id, user_id: 0)
 student3 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "", level: 0, merit_array: [], instructor_id: instructor1.id, user_id: 0)
 student4 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "", level: 0, merit_array: [], instructor_id: instructor1.id, user_id: 0)
