@@ -5,7 +5,7 @@ class CreateInstructors < ActiveRecord::Migration[7.0]
       t.string :name
       t.string :email
       t.string :password_digest
-      t.string :username
+      t.string :username, null: true
       t.string :site
 
       t.timestamps

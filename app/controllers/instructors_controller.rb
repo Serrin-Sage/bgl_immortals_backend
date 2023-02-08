@@ -35,21 +35,24 @@ class InstructorsController < ApplicationController
     end
 
     def create
-        instructor = Instructor.create(instructor_params)
-        if instructor.valid?
-            render json: instructor, status: :created
+        code = Code.find_by(number: params[:instructor_code])
+        if code
+            user = Instructor.create(instructor_params)
+            if user.valid?
+                token = JWT.encode({user_id: user.id}, APP_SECRET, 'HS256')
+                render json: {user: user, token: token, user_type: "instructor"}, status: :ok
+            else
+                render json: {error: user.errors.full_messages[0]}, status: 422
+            end
         else
-            render json: instructor.errors.full_messages, status: 422
+            render json: {error: "Code Not Found"}, status: 404
         end
     end
 
     private
 
-    # def instructor_params
-    #     params.permit(:instructor_code, :email, :password, :site, :username).tap do |whitelisted|
-    #     whitelisted[:username] = nil 
-    #     if whitelisted[:username].blank?
-    #     end
-    # end
+    def instructor_params
+        params.permit(:instructor_code, :name, :email, :password)
+    end
 end
 
