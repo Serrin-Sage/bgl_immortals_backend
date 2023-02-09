@@ -13,12 +13,25 @@ class StudentsController < ApplicationController
         end
     end
 
-    # def instructor_students
-    #     students = Student.where(instructor_id: params[:instructor_id])
-    #     if (students.any?)
-    #         render json: students
-    #     else
-    #         render json: "No Students Found", status: 404
-    #     end
-    # end
+    def create
+        student = Student.create(student_params)
+        
+        
+        if student.valid?
+            code = Code.create(number: params[:number], user_id: student.id)
+            if code.valid?
+                render json: student, status: :ok
+            else
+                render json: {error: "Code already in use"}, status: 422
+            end
+        else
+            render json: {error: student.errors.full_messages[0]}, status: 422
+        end
+    end
+
+    private
+
+    def student_params 
+        params.require(:student).permit(:name, :age, :immortal_house, :level, :instructor_id, merit_array: [])
+    end
 end
