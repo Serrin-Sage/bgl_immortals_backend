@@ -27,13 +27,12 @@ class UsersController < ApplicationController
 
     def create
         student = Student.find_by(name: params[:child_name])
-        code = Code.find_by(number: params[:parent_code])
-        if student
+        code = Code.find_by(user_id: student.id, number: params[:parent_code])
+        if student && code
             user = User.create(user_params)
             if user.valid?
                 token = JWT.encode({user_id: user.id}, APP_SECRET, 'HS256')
                 student.update(user_id: user.id)
-                code.update(user_id: user.id)
                 render json: {user: user, token: token, user_type: "parent"}, status: :ok
             else
                 render json: {error: user.errors.full_messages[0]}, status: 422
