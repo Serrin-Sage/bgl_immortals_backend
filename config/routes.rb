@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :students
   get '/students/:immortal_house', to: 'students#house'
+  # patch '/students/:id', to: 'students#update_merits'
   
   # get '/instructor_students/:instructor_id', to: 'students#instructor_students'
   resources :users

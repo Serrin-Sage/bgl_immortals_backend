@@ -48,7 +48,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_08_143957) do
     t.integer "age"
     t.string "immortal_house"
     t.integer "level"
-    t.string "merit_array", default: [], array: true
+    t.jsonb "merit_array", default: {"merits"=>[]}
     t.integer "instructor_id"
     t.integer "user_id"
     t.datetime "created_at", null: false

@@ -88,15 +88,15 @@ user1 = User.create(parent_code: parent_code.number, name: "Christine Woods", em
 
 p "Users Created"
 
-student1 = Student.create(name: "Jimmy Edwards", age: 10, immortal_house: "JavaScript", level: 7, merit_array: [beast, sage, diplomat], instructor_id: instructor1.id, user_id: user1.id)
-student2 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "None", level: 0, merit_array: [], instructor_id: instructor1.id, user_id: 0)
-student3 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "None", level: 0, merit_array: [], instructor_id: instructor1.id, user_id: 0)
-student4 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "None", level: 0, merit_array: [], instructor_id: instructor1.id, user_id: 0)
-student5 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "None", level: 0, merit_array: [], instructor_id: instructor1.id, user_id: 0)
-student6 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "None", level: 0, merit_array: [], instructor_id: instructor1.id, user_id: 0)
-student7 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "None", level: 0, merit_array: [], instructor_id: instructor1.id, user_id: 0)
-student8 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "None", level: 0, merit_array: [], instructor_id: instructor1.id, user_id: 0)
-student9 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "None", level: 0, merit_array: [], instructor_id: instructor1.id, user_id: 0)
-student10 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "None", level: 0, merit_array: [], instructor_id: instructor1.id, user_id: 0)
+student1 = Student.create(name: "Jimmy Edwards", age: 10, immortal_house: "JavaScript", level: 7, merit_array: {merits: [beast, sage, tortoise]}, instructor_id: instructor1.id, user_id: user1.id)
+student2 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "None", level: 0, merit_array: {merits: []}, instructor_id: instructor1.id, user_id: 0)
+student3 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "None", level: 0, merit_array: {merits: []}, instructor_id: instructor1.id, user_id: 0)
+student4 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "None", level: 0, merit_array: {merits: []}, instructor_id: instructor1.id, user_id: 0)
+student5 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "None", level: 0, merit_array: {merits: []}, instructor_id: instructor1.id, user_id: 0)
+student6 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "None", level: 0, merit_array: {merits: []}, instructor_id: instructor1.id, user_id: 0)
+student7 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "None", level: 0, merit_array: {merits: []}, instructor_id: instructor1.id, user_id: 0)
+student8 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "None", level: 0, merit_array: {merits: []}, instructor_id: instructor1.id, user_id: 0)
+student9 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "None", level: 0, merit_array: {merits: []}, instructor_id: instructor1.id, user_id: 0)
+student10 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "None", level: 0, merit_array: {merits: []}, instructor_id: instructor1.id, user_id: 0)
 
 p "Students Created"

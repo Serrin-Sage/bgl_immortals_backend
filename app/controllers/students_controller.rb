@@ -15,8 +15,6 @@ class StudentsController < ApplicationController
 
     def create
         student = Student.create(student_params)
-        
-        
         if student.valid?
             code = Code.create(number: params[:number], user_id: student.id)
             if code.valid?
@@ -28,6 +26,31 @@ class StudentsController < ApplicationController
             render json: {error: student.errors.full_messages[0]}, status: 422
         end
     end
+
+    def destroy
+        student = Student.find_by(id: params[:id])
+        if student
+            student.destroy
+        else
+            render json: {error: student.errors.full_messages}, status: 404
+        end
+    end
+
+
+    ##DOES NOT WORK YET!##
+    def update
+        student = Student.find_by(id: params[:id])
+        merit = {merits: params[:merit]}
+        merit_array = JSON.parse(request.body.read)['merit_array']
+
+        if student
+            student.update(merit_array: merit)
+            render json: student, status: :ok
+        else
+            render json: {error: "ERROR"}, status: 404
+        end
+    end
+
 
     private
 
