@@ -5,7 +5,7 @@ class CreateStudents < ActiveRecord::Migration[7.0]
       t.integer :age
       t.string :immortal_house
       t.integer :level
-      t.string :merit_array, array: true, default: []
+      t.jsonb :merit_array, default: {merits: []}
       t.integer :instructor_id
       t.integer :user_id, null: true
       
