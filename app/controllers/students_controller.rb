@@ -55,6 +55,6 @@ class StudentsController < ApplicationController
     private
 
     def student_params 
-        params.require(:student).permit(:name, :age, :immortal_house, :level, :instructor_id, merit_array: [])
+        params.require(:student).permit(:name, :age, :immortal_house, :level, :instructor_id, merit_array: {merits: []})
     end
 end
