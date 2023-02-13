@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   resources :students
   get '/students/:immortal_house', to: 'students#house'
+  patch '/update_level/:id', to: 'students#change_level'
+  patch '/assign_house/:id', to: 'students#assign_house'
   # patch '/students/:id', to: 'students#update_merits'
   
   # get '/instructor_students/:instructor_id', to: 'students#instructor_students'
