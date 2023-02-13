@@ -77,6 +77,71 @@ tortoise = Merit.create(name: "Tortoise", description: "Play a slow-paced, delib
 
 p "Tactical Merits Created"
 
+unstoppable = Merit.create(name: "Unstoppable", description: "Attend a Holiday or Snow Day Lab.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074720863057870948/Unstoppable.png", color: "brown", category: "dedication")
+long_haul = Merit.create(name: "Long Haul", description: "Attend a full week of Summer Labs.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074720862189666324/LongHaul.png", color: "brown", category: "dedication")
+crew_member = Merit.create(name: "Crew Member", description: "Win a Game Lab original Game.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074720861556326540/CrewMember.png", color: "brown", category: "dedication")
+duelist = Merit.create(name: "Duelist", description: "Participate in a Trading Card Lab.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074720861766025317/Duelist.png", color: "brown", category: "dedication")
+night_owl = Merit.create(name: "Night Owl", description: "Participate in a night-time drop-off activity.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074720862407753728/NightOwl.png", color: "brown", category: "dedication")
+sunday_sunday_sunday = Merit.create(name: "Sunday Sunday Sunday", description: "Participate in a Sunday activity.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074720862848172112/Sunday.png", color: "brown", category: "dedication")
+family_tree = Merit.create(name: "Family_tree", description: "Attend a Weekend Family Gaming Activity.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074720861984141413/FamilyTree.png", color: "brown", category: "dedication")
+party_animal = Merit.create(name: "party_animal", description: "Attend a birthday party at Brooklyn Game Lab.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074720862600704000/PartyAnimal.png", color: "brown", category: "dedication")
+
+p "Dedication Merits Created"
+
+celebrity = Merit.create(name: "celebrity", description: "Eran 5 votes on a lab card!", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074723542219894855/Celebrity.png", color: "orange", category: "research")
+visionary = Merit.create(name: "visionary", description: "Receive 4 votes on a Game Creation lab card.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074723581881241751/Visionary.png", color: "orange", category: "research")
+harold = Merit.create(name: "Harold", description: "Receive 4 votes on a Merit Desgin lab card.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074723543293624402/Harold.png", color: "orange", category: "research")
+dungeoneer = Merit.create(name: "dungeoneer", description: "Receive 4 votes on a RPG Mod lab card", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074723542693859328/Dungeoneer.png", color: "orange", category: "research")
+blacksmith = Merit.create(name: "Blacksmith", description: "Receive 4 votes on a Battle Mod lab card.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074723541997604884/Blacksmith.png", color: "orange", category: "research")
+prophet = Merit.create(name: "Prophet", description: "Receive 4 votes on an Immortal Mod lab card.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074723580899758100/Prophet.png", color: "orange", category: "research")
+summoner = Merit.create(name: "Summoner", description: "Receive 4 votes on a Character Creation lab card.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074723581306621972/Summoner.png", color: "orange", category: "research")
+humorist = Merit.create(name: "Humorist", description: "Receive 4 votes on a Humorous Content lab card.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074723543574663229/Humorist.png", color: "orange", category: "research")
+vampire = Merit.create(name: "Vampire", description: "Receive 4 votes on a Chess Mod lab card.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074723581587624016/Vampire.png", color: "orange", category: "research")
+scientist = Merit.create(name: "Scientist", description: "Receive 4 votes on an Explosive Combo lab card.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074723581084315741/Scientist.png", color: "orange", category: "research")
+marshal = Merit.create(name: "Marshal", description: "Receive 4 votes on a Winning Tactic lab card.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074723543775981690/Marshal.png", color: "orange", category: "research")
+oracle = Merit.create(name: "Oracle", description: "Receive 4 votes on an Losing Lesson lab card.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074723543994073122/Oracle.png", color: "orange", category: "research")
+designer = Merit.create(name: "Designer", description: "Receive 4 votes on an Expansion Idea lab card.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074723542446375002/Designer.png", color: "orange", category: "research")
+playtester = Merit.create(name: "Playtester", description: "Receive 4 votes on a Playtest Feedback lab card.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074723544249946202/Playtester.png", color: "orange", category: "research")
+engineer = Merit.create(name: "Engineer", description: "Receive 4 votes on a Rule Change lab card.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074723542983258254/Engineer.png", color: "orange", category: "research")
+
+p "Research Merits Created"
+
+champion = Merit.create(name: "Champion", description: "Win the main game of the day.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074727535763529860/Champion.png", color: "green", category: "victory")
+tycoon = Merit.create(name: "Tycoon", description: "Win a game with the highest score in your group or location.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074727571696128040/Tycoon.png", color: "green", category: "victory")
+dominator = Merit.create(name: "Dominator", description: "Win a game with the highest score across all Game Lab locations.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074727536443002920/Dominator.png", color: "green", category: "victory")
+chameleon = Merit.create(name: "Chameleon", description: "Win a modified game.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074727535482507305/Chameleon.png", color: "green", category: "victory")
+hotstreak = Merit.create(name: "Hotstreak", description: "Win three games in a row on different days.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074727570601414716/HotStreak.png", color: "green", category: "victory")
+king_of_the_jungle = Merit.create(name: "King of the Jungle", description: "Win a tournament or get the most wins in a round robin.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074727571243151370/KingOfTheJungle.png", color: "green", category: "victory")
+fantastic = Merit.create(name: "Fantastic", description: "Win a Game Lab original game.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074727536623370280/Fantastic.png", color: "green", category: "victory")
+game_day = Merit.create(name: "Game Day", description: "Win a team vs. team game.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074727537000845342/GameDay.png", color: "green", category: "victory")
+get_to_the_choppa = Merit.create(name: "Get To The Choppa!", description: "Win a cooperative game.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074727537210572911/GetToTheChoppa.png", color: "green", category: "victory")
+leader = Merit.create(name: "Leader", description: "Be voted MVP in a cooperative game.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074727571490611220/Leader.png", color: "green", category: "victory")
+daredevil = Merit.create(name: "Daredevil", description: "Win a physical game.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074727535985823835/Daredevil.png", color: "green", category: "victory")
+challenger = Merit.create(name: "Challenger", description: "Meet a challenge given to you by a counselor.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074727535247630376/Challenger.png", color: "green", category: "victory")
+deadlock = Merit.create(name: "Deadlock", description: "Tie for the win in a game.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074727536224903178/Deadlock.png", color: "green", category: "victory")
+forsaken = Merit.create(name: "Forsaken", description: "Be denied a win due to time constraints.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074727536807911505/Forsaken.png", color: "green", category: "victory")
+heartbreaker = Merit.create(name: "Heartbreaker", description: "Just barely lose a game.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074727570278457454/Heartbreaker.png", color: "green", category: "victory")
+
+p "Victory Merits Created"
+
+apprentice = Merit.create(name: "Apprentice", description: "Try an afterschool Lab for the first time!", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074730635316441198/Apprentice.png", color: "lightblue", category: "experience")
+general = Merit.create(name: "General", description: "Play an area control game for the first time.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074730636742504538/General.png", color: "lightblue", category: "experience")
+seeker = Merit.create(name: "Seeker", description: "Play a mystery game for the first time.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074730687522930718/Seeker.png", color: "lightblue", category: "experience")
+explorer = Merit.create(name: "Explorer", description: "Play a racing or discovery game for the first time.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074730636495048905/Explorer.png", color: "lightblue", category: "experience")
+drafter = Merit.create(name: "Drafter", description: "Play a drafting game for the first time.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074730636281118902/Drafter.png", color: "lightblue", category: "experience")
+constructor = Merit.create(name: "Constructor", description: "Play a building game for the first time.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074730636033667143/Constructor.png", color: "lightblue", category: "experience")
+warrior = Merit.create(name: "Warrior", description: "Play a fighting game for the first time.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074730687745232946/Warrior.png", color: "lightblue", category: "experience")
+puzzler = Merit.create(name: "Puzzler", description: "Play a puzzle game for the first time.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074730683907444796/Puzzler.png", color: "lightblue", category: "experience")
+merchant = Merit.create(name: "Merchant", description: "Play a bartering or trading game for the first time.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074730637237440542/Merchant.png", color: "lightblue", category: "experience")
+card_shark = Merit.create(name: "Card Shark", description: "Play a card game for the first time.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074730635756851350/CardShark.png", color: "lightblue", category: "experience")
+wordsmith = Merit.create(name: "Wordsmith", description: "Play a word game for the first time.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074730688059801721/Wordsmith.png", color: "lightblue", category: "experience")
+loyalist = Merit.create(name: "Loyalist", description: "Play a Brooklyn Game Lab Original game for the first time.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074730636960596080/Loyalist.png", color: "lightblue", category: "experience")
+battler = Merit.create(name: "Battler", description: "Play a Battle Lab game for the first time.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074730635551309874/Battler.png", color: "lightblue", category: "experience")
+role_player = Merit.create(name: "Role Player", description: "Play a roleplaying game for the first time.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074730687162228777/RolePlayer.png", color: "lightblue", category: "experience")
+adventurer = Merit.create(name: "Adventurer", description: "Play a D&D campaign for the first time.", image: "https://cdn.discordapp.com/attachments/1070018621562175568/1074730635081568299/Adventurer.png", color: "lightblue", category: "experience")
+
+p "Experience Merits Created"
+
 instructor_code = Code.create(number: "12345", instructor_id: 1)
 parent_code = Code.create(number: "56789", user_id: 1)
 
@@ -93,10 +158,5 @@ student2 = Student.create(name: Faker::Name.name, age: 9, immortal_house: "None"
 student3 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "None", level: 0, merit_array: {merits: []}, instructor_id: instructor1.id, user_id: 0)
 student4 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "None", level: 0, merit_array: {merits: []}, instructor_id: instructor1.id, user_id: 0)
 student5 = Student.create(name: Faker::Name.name, age: 8, immortal_house: "None", level: 0, merit_array: {merits: []}, instructor_id: instructor1.id, user_id: 0)
-student6 = Student.create(name: Faker::Name.name, age: 11, immortal_house: "None", level: 0, merit_array: {merits: []}, instructor_id: instructor1.id, user_id: 0)
-student7 = Student.create(name: Faker::Name.name, age: 7, immortal_house: "None", level: 0, merit_array: {merits: []}, instructor_id: instructor1.id, user_id: 0)
-student8 = Student.create(name: Faker::Name.name, age: 9, immortal_house: "None", level: 0, merit_array: {merits: []}, instructor_id: instructor1.id, user_id: 0)
-student9 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "None", level: 0, merit_array: {merits: []}, instructor_id: instructor1.id, user_id: 0)
-student10 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "None", level: 0, merit_array: {merits: []}, instructor_id: instructor1.id, user_id: 0)
 
 p "Students Created"
