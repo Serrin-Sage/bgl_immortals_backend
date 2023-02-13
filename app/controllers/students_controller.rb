@@ -37,11 +37,8 @@ class StudentsController < ApplicationController
     end
 
 
-    ##DOES NOT WORK YET!##
     def update
         student = Student.find_by(id: params[:id])
-        # merit = {merits: params[:merit]}
-        # merit_array = JSON.parse(request.body.read)['merit_array']
 
         if student
             student.update(merit_array: {merits: params[:merit]})
@@ -51,6 +48,25 @@ class StudentsController < ApplicationController
         end
     end
 
+    def change_level
+        student = Student.find_by(id: params[:id])
+        if student
+            student.update(level: params[:level])
+            render json: student, status: :ok
+        else 
+            render json: {error: "Can not update"}, status: 422
+        end
+    end
+
+    def assign_house
+        student = Student.find_by(id: params[:id])
+        if student
+            student.update(immortal_house: params[:house])
+            render json: student, status: :ok
+        else 
+            render json: {error: "Can not update"}, status: 422
+        end
+    end
 
     private
 
