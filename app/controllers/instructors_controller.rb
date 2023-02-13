@@ -27,7 +27,7 @@ class InstructorsController < ApplicationController
     
     def all_students
         instructor = Instructor.find_by(id: params[:id])
-        students = instructor.students
+        students = instructor.students.order(:id)
         if (students)
             render json: students
         else

@@ -40,12 +40,12 @@ class StudentsController < ApplicationController
     ##DOES NOT WORK YET!##
     def update
         student = Student.find_by(id: params[:id])
-        merit = {merits: params[:merit]}
-        merit_array = JSON.parse(request.body.read)['merit_array']
+        # merit = {merits: params[:merit]}
+        # merit_array = JSON.parse(request.body.read)['merit_array']
 
         if student
-            student.update(merit_array: merit)
-            render json: student, status: :ok
+            student.update(merit_array: {merits: params[:merit]})
+            render json: student.merit_array, status: :ok
         else
             render json: {error: "ERROR"}, status: 404
         end
