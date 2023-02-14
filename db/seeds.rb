@@ -153,7 +153,7 @@ user1 = User.create(parent_code: parent_code.number, name: "Christine Woods", em
 
 p "Users Created"
 
-student1 = Student.create(name: "Jimmy Edwards", age: 10, immortal_house: "JavaScript", level: 7, merit_array: {merits: [
+student1 = Student.create(name: "Jimmy Edwards", age: 10, immortal_house: "None", level: 6, merit_array: {merits: [
     apprentice, 
     explorer, 
     commander, 
