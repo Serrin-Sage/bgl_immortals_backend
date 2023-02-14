@@ -14,10 +14,12 @@ class StudentsController < ApplicationController
     end
 
     def create
-        student = Student.create(student_params)
+        student = Student.new(student_params)
         if student.valid?
-            code = Code.create(number: params[:number], user_id: student.id)
+            code = Code.new(number: params[:number], user_id: student.id)
             if code.valid?
+                student.save
+                code = Code.create(number: params[:number], user_id: student.id)
                 render json: student, status: :ok
             else
                 render json: {error: "Code already in use"}, status: 422
@@ -29,6 +31,7 @@ class StudentsController < ApplicationController
 
     def destroy
         student = Student.find_by(id: params[:id])
+        
         if student
             student.destroy
         else
