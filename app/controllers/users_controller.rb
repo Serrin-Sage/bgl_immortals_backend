@@ -18,7 +18,7 @@ class UsersController < ApplicationController
                 user_type = JWT.encode({user_type: "parent"}, APP_SECRET, 'HS256')
                 render json: {user: user, token: token, user_type: "parent"}, status: :ok
             else
-                render json: { error: 'Invalid credentials or User not found' }, status: :unauthorized
+                render json: { error: "Invalid Credentials" }, status: :unauthorized
             end
         else
             render json: { error: 'Invalid request method' }, status: :bad_request
