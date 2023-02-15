@@ -18,7 +18,8 @@ class InstructorsController < ApplicationController
                 user_type = JWT.encode({user_type: "instructor"}, APP_SECRET, 'HS256')
                 render json: {user: user, token: token, user_type: "instructor"}, status: :ok
             else
-                render json: { error: user.errors.full_messages[0] }, status: :unauthorized
+                errors = user ? user.errors.full_messages : ["Invalid credentials"]
+                render json: { error: errors[0] }, status: :unauthorized
             end
         else
             render json: { error: 'Invalid request method' }, status: :bad_request
