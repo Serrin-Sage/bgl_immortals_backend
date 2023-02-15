@@ -46,7 +46,6 @@ class InstructorsController < ApplicationController
                 user = Instructor.create(instructor_params)
                 if user.valid?
                     token = JWT.encode({user_id: user.id}, APP_SECRET, 'HS256')
-                    code.update(instructor_id: user.id)
                     render json: {user: user, token: token, user_type: "instructor"}, status: :ok
                 else
                     render json: {error: user.errors.full_messages[0]}, status: 422
