@@ -1,5 +1,5 @@
 class StudentSerializer < ActiveModel::Serializer
-  attributes :id, :name, :age, :immortal_house, :level, :merit_array, :instructor_id
+  attributes :id, :name, :pronoun, :age, :immortal_house, :level, :merit_array, :instructor_id
 
   belongs_to :user, optional: true
 

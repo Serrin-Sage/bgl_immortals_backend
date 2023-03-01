@@ -45,6 +45,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_08_143957) do
 
   create_table "students", force: :cascade do |t|
     t.string "name"
+    t.string "pronoun"
     t.integer "age"
     t.string "immortal_house"
     t.integer "level"
