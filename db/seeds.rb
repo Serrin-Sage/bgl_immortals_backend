@@ -153,7 +153,7 @@ user1 = User.create(parent_code: parent_code.number, name: "Christine Woods", em
 
 p "Users Created"
 
-student1 = Student.create(name: "Jimmy Edwards", age: 10, immortal_house: "None", level: 6, merit_array: {merits: [
+student1 = Student.create(name: "Jimmy Edwards", pronoun: "he/him", age: 10, immortal_house: "None", level: 6, merit_array: {merits: [
     apprentice, 
     explorer, 
     commander, 
@@ -193,9 +193,9 @@ student1 = Student.create(name: "Jimmy Edwards", age: 10, immortal_house: "None"
     beast,
     forsaken,
     leader]}, instructor_id: instructor1.id, user_id: user1.id)
-student2 = Student.create(name: Faker::Name.name, age: 9, immortal_house: "None", level: 1, merit_array: {merits: [apprentice, enthusiast, tactician]}, instructor_id: instructor1.id, user_id: 0)
-student3 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "None", level: 0, merit_array: {merits: []}, instructor_id: instructor1.id, user_id: 0)
-student4 = Student.create(name: Faker::Name.name, age: 10, immortal_house: "None", level: 0, merit_array: {merits: []}, instructor_id: instructor1.id, user_id: 0)
-student5 = Student.create(name: Faker::Name.name, age: 8, immortal_house: "None", level: 0, merit_array: {merits: []}, instructor_id: instructor1.id, user_id: 0)
+student2 = Student.create(name: Faker::Name.name, pronoun: "they/them", age: 9, immortal_house: "None", level: 1, merit_array: {merits: [apprentice, enthusiast, tactician]}, instructor_id: instructor1.id, user_id: 0)
+student3 = Student.create(name: Faker::Name.name, pronoun: "None", age: 10, immortal_house: "None", level: 0, merit_array: {merits: []}, instructor_id: instructor1.id, user_id: 0)
+student4 = Student.create(name: Faker::Name.name, pronoun: "she/her", age: 10, immortal_house: "None", level: 0, merit_array: {merits: []}, instructor_id: instructor1.id, user_id: 0)
+student5 = Student.create(name: Faker::Name.name, pronoun: "None", age: 8, immortal_house: "None", level: 0, merit_array: {merits: []}, instructor_id: instructor1.id, user_id: 0)
 
 p "Students Created"
